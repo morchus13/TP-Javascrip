@@ -1,0 +1,41 @@
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+}
+
+/*RETOQUES DE ESTILO PARA EL NAV SUPERIOR*/
+
+
+
+
+/*       ESTILO PARA LAS TARJETAS             */
+.contenedorTarjetas{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	min-width: 200px;
+
+}
+.tarjeta{
+	width: 200px;
+	height: 200px;
+	border: 1px solid;
+	margin: 20px 5px;
+	padding: 10px;
+	text-align: center;
+
+}
+.textoClaro {
+	color:#888888;
+}
+
+.caja-azul{
+	border-color: #05F;
+}
+.caja-verde{
+	border-color: #15A36F;
+}
+.caja-amarilla{
+	border-color: #FF9900;
+}
