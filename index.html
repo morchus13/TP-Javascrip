@@ -59,33 +59,36 @@
 		
 		<section>
 			
-			
 			<div class="contenedor-form">
-			
-				<div class="divIzquierdo">
-					<p></p>
-				</div>
-
-				<form class="formulario">
+				
+				<div class="superior">
 					<h5>VENTA</h5>
 					<h2>VALOR DEL TICKET $200</h2>
+				</div>
+				
 
-					<input type="text" class="nombre" placeholder="Nombre">
-					<input type="text" class="apellido" placeholder="Apellido">
-					<input type="<input type="email" class="email" placeholder="Correo">
-
+				<form class="formulario">					
+					<input type="text" id="nombre" placeholder="Nombre">
+					<input type="text" id="apellido" placeholder="Apellido">
+					<input type="email" id="email" placeholder="Correo">
+					<label for="cantidad">Cantidad</label>
+					<label for="categoria">Categoria</label>
+					<input type="text" id="cantidad" name="cantidad" id="cantidad">
+					<select name="categoria" size="1" id="categoria" autofocus="1" required="">
+						<option value="Seleccionar">Seleccionar Opcion</option>
+						<option value="estudiante">Estudiante</option>
+						<option value="trainer">Trainer</option>
+						<option value="junio">Junior</option>
+					</select>
+					<label for="" id="totalPagar">Total a Pagar: $</label>
+					<button type="button" class="botones">Borrar</button>
+					<button type="submit" class="botones">Enviar</button>
 				</form>
 
-				<div class="divDerecho">
-					<p></p>
-				</div>
-			
 			</div>
-			
-			
+
 		</section>
 		
-
 
 
 	</main>
