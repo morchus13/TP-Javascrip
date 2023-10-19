@@ -16,7 +16,7 @@ console.log(totalPagar.innerText);
 console.log("Ticket:"+ cantTicket.value);
 
 categoria.addEventListener("change", function(){
-	const valor= 1000;
+	const valor= 200;
 	let cat=categoria.value;
 	let cant= cantTicket.value;
 	console.log("opcion: " + cat);	
