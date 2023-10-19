@@ -6,21 +6,7 @@
 
 /*       RETOQUES DE ESTILO PARA EL NAV SUPERIOR        */
 
-nav{
-	height: 6vh;
-}
 
-main{
-	height: 80vh;
-	position:relative;
-	top: 40px;
-}
-@media screen and (max-width:630px){
-	main{
-		position:static;
-		height: 100%;
-	}
-}
 
 /*       ESTILO PARA LAS TARJETAS             */
 .contenedorTarjetas{
