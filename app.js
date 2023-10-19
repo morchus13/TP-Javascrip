@@ -21,9 +21,9 @@ categoria.addEventListener("change", function(){
 	let cant= cantTicket.value;
 	console.log("opcion: " + cat);	
 	
-	let descEstudiante= valor * 80/100 * cant;
-	let descTrainer= valor * 50 / 100 * cant;
-	let descJunior= valor * 15 / 100 * cant;
+	let descEstudiante= valor * 80/100 * cant + valor;
+	let descTrainer= valor * 50 / 100 * cant + valor;
+	let descJunior= valor * 15 / 100 * cant + valor;
 
 
 
