@@ -37,7 +37,6 @@ categoria.addEventListener("change", function(){
 	descJunior= (valor - valor * 0.15) * cant;
 	
 	
-
 	if (categoria.value == "estudiante"){
 		totalPagar.innerText=`Total a Pagar: $${descEstudiante}`;
 	} else if( categoria.value == "trainer"){
@@ -49,6 +48,7 @@ categoria.addEventListener("change", function(){
 
 cantTicket.addEventListener("change", function(){
 	const valor= 200;
+
 	
 	const cat=categoria.value;
 	const cant=parseInt(cantTicket.value);
@@ -62,6 +62,16 @@ cantTicket.addEventListener("change", function(){
 	let descEstudiante=0
 	let descTrainer=0;
 	let descJunior =0;
+
+	let cat=categoria.value;
+	let cant= cantTicket.value;
+	console.log("opcion: " + cat);	
+	
+	let descEstudiante= valor * 80/100 * cant + valor;
+	let descTrainer= valor * 50 / 100 * cant +valor;
+	let descJunior= valor * 15 / 100 * cant + valor;
+
+
 
 	descEstudiante= (valor - valor * 0.8) * cant;
 	descTrainer=(valor - valor * 0.5) * cant;
