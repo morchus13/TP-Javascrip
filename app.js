@@ -38,14 +38,14 @@ categoria.addEventListener("change", function(){
 });
 
 cantTicket.addEventListener("change", function(){
-	const valor= 1000;
+	const valor= 200;
 	let cat=categoria.value;
 	let cant= cantTicket.value;
 	console.log("opcion: " + cat);	
 	
-	let descEstudiante= valor * 80/100 * cant;
-	let descTrainer= valor * 50 / 100 * cant;
-	let descJunior= valor * 15 / 100 * cant;
+	let descEstudiante= valor * 80/100 * cant + valor;
+	let descTrainer= valor * 50 / 100 * cant +valor;
+	let descJunior= valor * 15 / 100 * cant + valor;
 
 
 
