@@ -15,17 +15,28 @@ console.log(categoria.value);
 console.log(totalPagar.innerText);
 console.log("Ticket:"+ cantTicket.value);
 
+
 categoria.addEventListener("change", function(){
 	const valor= 200;
-	let cat=categoria.value;
-	let cant= cantTicket.value;
-	console.log("opcion: " + cat);	
 	
-	let descEstudiante= valor * 80/100 * cant + valor;
-	let descTrainer= valor * 50 / 100 * cant + valor;
-	let descJunior= valor * 15 / 100 * cant + valor;
+	const cat=categoria.value;
+	const cant=parseInt(cantTicket.value);
+	if(cant==NaN){
+		cant=1;
+	}
+	
+	console.log("opcion: " + cat);	
+	console.log("Cantidad Ticket: " + cant);
+	
+	let descEstudiante=0
+	let descTrainer=0;
+	let descJunior =0;
 
-
+	descEstudiante= (valor - valor * 0.8) * cant;
+	descTrainer=(valor - valor * 0.5) * cant;
+	descJunior= (valor - valor * 0.15) * cant;
+	
+	
 
 	if (categoria.value == "estudiante"){
 		totalPagar.innerText=`Total a Pagar: $${descEstudiante}`;
@@ -34,20 +45,29 @@ categoria.addEventListener("change", function(){
 	} else if (categoria.value == "junior"){
 		totalPagar.innerText=`Total a Pagar: $${descJunior}`;
 	}
-
 });
 
 cantTicket.addEventListener("change", function(){
-	const valor= 1000;
-	let cat=categoria.value;
-	let cant= cantTicket.value;
-	console.log("opcion: " + cat);	
+	const valor= 200;
 	
-	let descEstudiante= valor * 80/100 * cant;
-	let descTrainer= valor * 50 / 100 * cant;
-	let descJunior= valor * 15 / 100 * cant;
+	const cat=categoria.value;
+	const cant=parseInt(cantTicket.value);
+	if(cant==NaN){
+		cant=1;
+	}
+	
+	console.log("opcion: " + cat);	
+	console.log("Cantidad Ticket: " + cant);
+	
+	let descEstudiante=0
+	let descTrainer=0;
+	let descJunior =0;
 
-
+	descEstudiante= (valor - valor * 0.8) * cant;
+	descTrainer=(valor - valor * 0.5) * cant;
+	descJunior= (valor - valor * 0.15) * cant;
+	
+	
 
 	if (categoria.value == "estudiante"){
 		totalPagar.innerText=`Total a Pagar: $${descEstudiante}`;
@@ -56,5 +76,4 @@ cantTicket.addEventListener("change", function(){
 	} else if (categoria.value == "junior"){
 		totalPagar.innerText=`Total a Pagar: $${descJunior}`;
 	}
-
 });
