@@ -6,37 +6,32 @@ tickets a comprar con el descuento correspondiente dependiendo la
 categoría seleccionada, existen 3 categorías, Estudiante, Trainee,
  Junior*/
 
-
 const categoria = document.getElementById("categoria");
 const totalPagar = document.getElementById("totalPagar");
 const cantTicket = document.querySelector('#cantidad');
 
-console.log(categoria.value);
-console.log(totalPagar.innerText);
-console.log("Ticket:"+ cantTicket.value);
-
-
 categoria.addEventListener("change", function(){
-	const valor= 200;
 	
+	// Defino las varables internas
+	const valor= 200;
 	const cat=categoria.value;
-	const cant=parseInt(cantTicket.value);
-	if(cant==NaN){
+	let cant=cantTicket.value;
+	// Evaluo el valor de cantidad si es vacio le asigno 1
+	if(cant=='') {
 		cant=1;
 	}
-	
-	console.log("opcion: " + cat);	
-	console.log("Cantidad Ticket: " + cant);
-	
-	let descEstudiante=0
+
+	// Variables para calcular los descuentos y los pongo en 0
+	let descEstudiante=0;
 	let descTrainer=0;
 	let descJunior =0;
 
+	// calculo cada descuento
 	descEstudiante= (valor - valor * 0.8) * cant;
 	descTrainer=(valor - valor * 0.5) * cant;
 	descJunior= (valor - valor * 0.15) * cant;
 	
-	
+	// Depoendiendo que elige el usuario agrego el descuento a la etiqueta
 	if (categoria.value == "estudiante"){
 		totalPagar.innerText=`Total a Pagar: $${descEstudiante}`;
 	} else if( categoria.value == "trainer"){
@@ -45,40 +40,28 @@ categoria.addEventListener("change", function(){
 		totalPagar.innerText=`Total a Pagar: $${descJunior}`;
 	}
 });
-
+// mismo evento por si el usuario cambia la cantidad se actualiza el precio
 cantTicket.addEventListener("change", function(){
+	// Defino las varables internas
 	const valor= 200;
-
-	
 	const cat=categoria.value;
-	const cant=parseInt(cantTicket.value);
-	if(cant==NaN){
+	let cant=cantTicket.value;
+	// Evaluo el valor de cantidad si es vacio le asigno 1
+	if(cant=='') {
 		cant=1;
 	}
-	
-	console.log("opcion: " + cat);	
-	console.log("Cantidad Ticket: " + cant);
-	
-	let descEstudiante=0
+
+	// Variables para calcular los descuentos y los pongo en 0
+	let descEstudiante=0;
 	let descTrainer=0;
 	let descJunior =0;
 
-	let cat=categoria.value;
-	let cant= cantTicket.value;
-	console.log("opcion: " + cat);	
-	
-	let descEstudiante= valor * 80/100 * cant + valor;
-	let descTrainer= valor * 50 / 100 * cant +valor;
-	let descJunior= valor * 15 / 100 * cant + valor;
-
-
-
+	// calculo cada descuento
 	descEstudiante= (valor - valor * 0.8) * cant;
 	descTrainer=(valor - valor * 0.5) * cant;
 	descJunior= (valor - valor * 0.15) * cant;
 	
-	
-
+	// Depoendiendo que elige el usuario agrego el descuento a la etiqueta
 	if (categoria.value == "estudiante"){
 		totalPagar.innerText=`Total a Pagar: $${descEstudiante}`;
 	} else if( categoria.value == "trainer"){
@@ -87,3 +70,13 @@ cantTicket.addEventListener("change", function(){
 		totalPagar.innerText=`Total a Pagar: $${descJunior}`;
 	}
 });
+
+
+// BOTON BORRAR
+
+const borrar = document.getElementById("borrar");
+borrar.addEventListener("click", limpiar);
+function limpiar(){
+	const miFormulario= document.getElementById("formulario");
+	miFormulario.reset();	
+}
