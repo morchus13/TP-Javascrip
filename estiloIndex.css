@@ -13,7 +13,7 @@
 	min-width: 200px;
 
 }
-.tarjeta{
+.tarjeta {
 	width: 200px;
 	height: 200px;
 	border: 1px solid;
@@ -22,18 +22,32 @@
 	text-align: center;
 
 }
+
+.caja-azul:hover{
+	background-color: #B6BDEF;
+}
+.caja-verde:hover{
+	background-color: #B6EFC1;
+}
+.caja-amarilla:hover{
+	background-color: #EFECB6;
+}
+
 .textoClaro {
 	color:#888888;
 }
 
 .caja-azul{
 	border-color: #05F;
+	box-shadow: 2px 4px 6px #05F;
 }
 .caja-verde{
-	border-color: #15A36F;
+	border-color: ;
+	box-shadow: 2px 4px 6px #15A36F;
 }
 .caja-amarilla{
 	border-color: #FF9900;
+	box-shadow: 2px 4px 6px #FF9900;	
 }
 
 
