@@ -69,21 +69,21 @@
 				
 
 				<form class="formulario" id="formulario">					
-					<input type="text" id="nombre" placeholder="Nombre">
-					<input type="text" id="apellido" placeholder="Apellido">
-					<input type="email" id="email" placeholder="Correo">
+					<input type="text" id="nombre" placeholder="Nombre" required="">
+					<input type="text" id="apellido" placeholder="Apellido" required="">
+					<input type="email" id="email" placeholder="Correo" required="">
 					<label for="cantidad" id="lbl-cantidad">Cantidad</label>
 					<p for="categoria" id="lbl-categoria">Categoria</p>
-					<input type="text" id="cantidad" name="cantidad" id="cantidad">
+					<input type="text" id="cantidad" name="cantidad" id="cantidad" required="">
 					<select name="categoria" size="1" id="categoria" autofocus="1" required="">
-						<option value="Seleccionar">Seleccionar Opcion</option>
+						<option value="seleccionar">Seleccionar Opcion</option>
 						<option value="estudiante">Estudiante</option>
 						<option value="trainer">Trainer</option>
 						<option value="junior">Junior</option>
 					</select>
 					<label for="" id="totalPagar">Total a Pagar: $</label>
 					<button type="button" class="botones" id="borrar">Borrar</button>
-					<button type="submit" class="botones">Resumen</button>
+					<button type="submit" class="botones" id="resumen">Resumen</button>
 				</form>
 
 			</div>
